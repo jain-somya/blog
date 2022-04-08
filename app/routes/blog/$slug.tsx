@@ -7,12 +7,12 @@ import type { Post } from "~/post";
 import { LinksFunction } from "@remix-run/server-runtime";
 import styles from "highlight.js/styles/github-dark-dimmed.css";
 
-export const links: LinksFunction=()=> {
+export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
-}
+};
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.slug, "expected params.slug");
-  return json(await getPost(params.slug,"blog"));
+  return json(await getPost(params.slug, "blog"));
 };
 
 export default function PostSlug() {
@@ -29,7 +29,6 @@ export default function PostSlug() {
             />
           </div>
           <div className="flex flex-col sm:flex-row mt-10">
-          
             <div className="sm:px-3 sm:py-8 sm:border-l sm:border-r border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
               <p className="leading-relaxed text-lg mb-4">
                 Meggings portland fingerstache lyft, post-ironic fixie man bun
@@ -38,11 +37,10 @@ export default function PostSlug() {
                 lumbersexual salvia messenger bag. Coloring book flannel
                 truffaut craft beer drinking vinegar sartorial, disrupt fashion
                 axe normcore meh butcher. Portland 90's scenester vexillologist
-                forage post-ironic asymmetrical, chartreuse disrupt butcher
+                forage post-ironic asymmetrical, chartreufse disrupt butcher
                 paleo intelligentsia pabst before they sold out four loko. 3
                 wolf moon brooklyn.
               </p>
-             
             </div>
           </div>
         </div>
@@ -50,5 +48,4 @@ export default function PostSlug() {
     </section>
   );
   //  <main dangerouslySetInnerHTML={{ __html: post.html }} />;
-
 }
